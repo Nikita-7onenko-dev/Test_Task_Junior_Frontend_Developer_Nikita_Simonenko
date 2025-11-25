@@ -1,0 +1,39 @@
+/* Reset */
+@import url('./normalize.scss');
+
+/* Global */
+body{
+  background: 
+    radial-gradient(circle at top left, #D6E6F9 0%, transparent 50%),
+    radial-gradient(circle at bottom right, #D6E6F9 0%, transparent 50%);
+}
+
+header{
+  border-bottom: #fff solid 1px;
+  padding-inline: clamp(10px, 10vw, 110px);
+  padding-block: 24px;
+  position: relative;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at bottom,
+    #82838513 0%,
+    transparent 100%
+  );
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  gap: 40px;
+}
