@@ -20,21 +20,25 @@ export function LoadingBar() {
 
     const timeLine = gsap.timeline({
       repeat: -1,
-      yoyo: true,
-      repeatDelay: 0.5
+      repeatDelay: 0.25
     });
 
-    timeLine.fromTo(
-      bars,
-      { opacity: 0, scaleY: 0.2 },
-      {
-        opacity: 1,
-        scaleY: 1,
-        stagger: 0.25,
-        duration: 0.4,
-        ease: 'easyInOut'
-      }
-    );
+    timeLine.fromTo(bars, {
+      opacity: 0,
+      scaleY: 0.2,
+    }, {
+      opacity: 1,
+      scaleY: 1,
+      stagger: 0.25,
+      duration: 0.3,
+    })
+
+    timeLine.to(bars, {
+      opacity: 0,
+      scaleY: 0.2,
+      stagger: 0.25,
+      duration: 0.3,
+    })
 
     return () => {
       timeLine.kill()

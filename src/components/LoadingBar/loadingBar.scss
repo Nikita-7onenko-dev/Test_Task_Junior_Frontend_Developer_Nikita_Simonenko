@@ -6,10 +6,4 @@
   align-items: center;
   padding: 10px;
   gap: 6px;
-
-  svg{
-    opacity: 0;
-    transform: scaleY(0);
-    transition: opacity 0.3s, transform 0.3s;
-  }
 }
